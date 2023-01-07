@@ -1,0 +1,184 @@
+{
+  "id": "project_1",
+  "name": "The Dogs Life Project",
+  "kind": "Project",
+  "properties": {},
+  "elements": [
+    {
+      "id": "app1",
+      "name": "Dogs Life",
+      "kind": "App",
+      "properties": {},
+      "elements": [
+        {
+          "id": "page_1",
+          "name": "Main Page",
+          "kind": "Page",
+          "properties": {},
+          "elements": [
+            {
+              "id": "text1_1",
+              "name": "First Text",
+              "kind": "Text",
+              "properties": {
+                "content": {
+                  "expr": "\"Welcome to Dogs Life!\""
+                }
+              }
+            },
+            {
+              "id": "text1_2",
+              "name": "Second Text",
+              "kind": "Text",
+              "properties": {
+                "content": {
+                  "expr": "\"The future of low code programming\""
+                }
+              }
+            },
+            {
+              "id": "text1_3",
+              "name": "Third Text",
+              "kind": "Text",
+              "properties": {
+                "content": {
+                  "expr": "\"Start your program here...\" + CurrentUrl().text"
+                }
+              }
+            },
+            {
+              "id": "text_1",
+              "name": "Text 1",
+              "kind": "Text",
+              "properties": {
+                "content": {
+                  "expr": "\"Path sections:: \" + CurrentUrl().pathSections"
+                }
+              },
+              "elements": []
+            },
+            {
+              "id": "button_1",
+              "name": "Button 1",
+              "kind": "Button",
+              "properties": {
+                "content": "Set Url",
+                "appearance": "outline",
+                "action": {
+                  "expr": "ShowPage('MainPage', 'tab1', 'id123')"
+                }
+              },
+              "elements": []
+            },
+            {
+              "id": "button_2",
+              "name": "Back Button",
+              "kind": "Button",
+              "properties": {
+                "content": "Go Back",
+                "appearance": "outline",
+                "action": {
+                  "expr": "ShowPage('goback')"
+                }
+              },
+              "elements": []
+            },
+            {
+              "id": "textinput_1",
+              "name": "Page2 Id",
+              "kind": "TextInput",
+              "properties": {},
+              "elements": []
+            },
+            {
+              "id": "textinput_2",
+              "name": "Page2 Variant",
+              "kind": "TextInput",
+              "properties": {},
+              "elements": []
+            },
+            {
+              "id": "button_3",
+              "name": "Link Button",
+              "kind": "Button",
+              "properties": {
+                "content": "Go somewhere",
+                "appearance": "link",
+                "action": {
+                  "expr": "Log('I am going!');ShowPage(Page2,Page2Id.value, Record('var', Page2Variant.value))"
+                }
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "page_2",
+          "name": "Page 2",
+          "kind": "Page",
+          "properties": {},
+          "elements": [
+            {
+              "id": "text_2",
+              "name": "Text 2",
+              "kind": "Text",
+              "properties": {
+                "content": "The Second Page (not the first)",
+                "fontSize": 24
+              },
+              "elements": []
+            },
+            {
+              "id": "text_3",
+              "name": "Text 3",
+              "kind": "Text",
+              "properties": {
+                "content": {
+                  "expr": "'Id: ' + CurrentUrl().pathSections[0]"
+                }
+              },
+              "elements": []
+            },
+            {
+              "id": "text_4",
+              "name": "Text 3 Copy",
+              "kind": "Text",
+              "properties": {
+                "content": {
+                  "expr": "'Variant: ' + CurrentUrl().query.var"
+                }
+              },
+              "elements": []
+            },
+            {
+              "id": "button_5",
+              "name": "Button 4 Copy",
+              "kind": "Button",
+              "properties": {
+                "content": "Back to Main Page",
+                "appearance": "link",
+                "action": {
+                  "expr": "ShowPage(MainPage)"
+                }
+              },
+              "elements": []
+            },
+            {
+              "id": "button_4",
+              "name": "Back Button",
+              "kind": "Button",
+              "properties": {
+                "content": "Just Go Back Now",
+                "appearance": "link",
+                "action": {
+                  "expr": "ShowPage('goback')"
+                }
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
